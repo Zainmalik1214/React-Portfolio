@@ -7,7 +7,7 @@ export default function Footer() {
       <p>
         Crafted with care by{' '}
         <span className={styles.name}>Zain ul Abadin</span>
-        {' '}·{' '}PHP Laravel Developer{' '}·{' '}Lahore, Pakistan{' '}·{' '}2025
+        {' '}·{' '}PHP Laravel Developer{' '}·{' '}Lahore, Pakistan{' '}·{' '}
       </p>
     </footer>
   );
