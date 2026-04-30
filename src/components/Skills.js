@@ -4,7 +4,7 @@ import styles from './Skills.module.css';
 const categories = [
   { icon: '⚙️', bg: '#EFF6FF', title: 'Backend', tags: ['PHP', 'Laravel', 'OOP', 'MVC Architecture', 'REST APIs', 'Eloquent ORM'], color: 'blue', level: 90 },
   { icon: '🎨', bg: '#ECFDF5', title: 'Frontend', tags: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'jQuery', 'Ajax'], color: 'green', level: 78 },
-  { icon: '🗄️', bg: '#FFFBEB', title: 'Database & APIs', tags: ['MySQL', 'Postman','Srripe', 'Gmail API', 'Outlook API', 'IMAP'], color: 'amber', level: 85 },
+  { icon: '🗄️', bg: '#FFFBEB', title: 'Database & APIs', tags: ['MySQL', 'Postman','Stripe', 'Gmail API', 'Outlook API', 'IMAP'], color: 'amber', level: 85 },
   { icon: '🤖', bg: '#F5F3FF', title: 'Automation & AI', tags: ['n8n Workflows', 'AI/ML Integration', 'Lead Scoring', 'Email Automation'], color: 'purple', level: 72 },
   { icon: '🛠️', bg: '#FDF2F8', title: 'Tools & Dev', tags: ['Git', 'VS Code', 'RBAC', 'Real-time Dashboards'], color: 'pink', level: 88 },
   { icon: '🏥', bg: '#F9FAFB', title: 'Domains', tags: ['Hospital Management', 'CRM Systems', 'Billing Systems', 'Inventory'], color: 'gray', level: 92 },
