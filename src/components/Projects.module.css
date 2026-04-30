@@ -1,0 +1,49 @@
+.projects { padding: 90px 5vw; background: var(--cream); }
+.sectionLabel { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: var(--accent); margin-bottom: .75rem; }
+.projects h2 { font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 700; color: var(--ink); margin-bottom: .75rem; }
+.sub { color: var(--muted); font-size: 1rem; max-width: 540px; line-height: 1.7; margin-bottom: 3rem; font-weight: 300; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; }
+
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  transition: transform .2s ease, box-shadow .2s ease;
+  position: relative; overflow: hidden;
+  cursor: default;
+  will-change: transform;
+}
+.card:hover { box-shadow: 0 24px 60px rgba(0,0,0,.12); }
+
+.cardGlow {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(37,99,235,.07) 0%, transparent 60%);
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+.cardBar {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+  transform-origin: left;
+}
+
+.topRow { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
+.emoji { font-size: 2rem; animation: float 4s ease-in-out infinite; }
+.number {
+  font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900;
+  color: rgba(37,99,235,.07); line-height: 1;
+}
+.cardTitle { font-weight: 700; font-size: 1.1rem; color: var(--ink); margin-bottom: .6rem; }
+.desc { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.1rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag { padding: .3rem .85rem; border-radius: 50px; font-size: .78rem; font-weight: 500; transition: transform .2s; }
+.tag:hover { transform: translateY(-2px); }
+
+.blue   { background: #EFF6FF; color: #1D4ED8; }
+.green  { background: #ECFDF5; color: #065F46; }
+.amber  { background: #FFFBEB; color: #92400E; }
+.purple { background: #F5F3FF; color: #5B21B6; }
+.pink   { background: #FDF2F8; color: #9D174D; }

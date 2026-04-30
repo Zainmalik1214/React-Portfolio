@@ -1,0 +1,44 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(253,250,245,.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 5vw; height: 64px;
+  transition: box-shadow .3s, background .3s;
+}
+.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.07); background: rgba(253,250,245,.98); }
+.logo {
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem;
+  color: var(--ink); letter-spacing: -.02em;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.links { display: flex; gap: 2rem; list-style: none; }
+.links a { color: var(--muted); font-size: .9rem; font-weight: 500; transition: color .2s; position: relative; }
+.links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); border-radius: 2px; transition: width .3s; }
+.links a:hover { color: var(--accent); }
+.links a:hover::after { width: 100%; }
+.cta {
+  background: var(--accent); color: #fff; padding: .5rem 1.3rem; border-radius: 50px;
+  font-size: .85rem; font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
+  position: relative; overflow: hidden;
+}
+.cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.25) 50%, transparent 70%);
+  transform: translateX(-100%); transition: transform .5s;
+}
+.cta:hover::before { transform: translateX(100%); }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,.35); }
+.hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+.mobileMenu {
+  position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+  background: var(--white); border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  animation: slideDown .2s ease;
+}
+.mobileMenu a { padding: .85rem 5vw; color: var(--ink); font-weight: 500; border-bottom: 1px solid var(--border); transition: color .2s, background .2s; }
+.mobileMenu a:hover { color: var(--accent); background: #EFF6FF; }
+@media (max-width: 768px) { .links, .cta { display: none; } .hamburger { display: block; } }
